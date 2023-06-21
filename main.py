@@ -30,26 +30,3 @@ class Matrix:
                     result[i][j] += self.matrix[i][k] * otherMatrix.matrix[k][j]
         
         self.matrix = result
-
-matrixA = Matrix([[1, 6, 8], 
-                  [2, 3, 7]])
-print("matrix a: ", matrixA.matrix)
-
-matrixB = Matrix([[4, 2, 5], 
-                  [9, 5, 9]])
-print("matrix b:", matrixB.matrix)
-
-matrixC = Matrix([[1],[2]])
-print("matrix c:", matrixC.matrix)
-
-# matrixA.add(matrixB)
-# print("matrixA + matrixB = ", matrixA.matrix)
-
-# matrixA.add(matrixC)
-# print(matrixA.matrix)
-
-# matrixA.sub(matrixB)
-# print("matrixA - matrixB = ", matrixA.matrix)
-
-matrixA.mult(matrixB)
-print("matrix a * matrix b = ", matrixA.matrix)
