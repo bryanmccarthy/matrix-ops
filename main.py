@@ -30,3 +30,6 @@ class Matrix:
                     result[i][j] += self.matrix[i][k] * otherMatrix.matrix[k][j]
         
         self.matrix = result
+    
+    def transpose(self):
+        self.matrix = [[self.matrix[i][j] for i in range(len(self.matrix))] for j in range(len(self.matrix[0]))]

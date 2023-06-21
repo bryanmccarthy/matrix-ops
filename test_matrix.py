@@ -19,3 +19,8 @@ class TestMatrix(unittest.TestCase):
         b = Matrix([[9, 8, 7], [6, 5, 4], [3, 2, 1]])
         a.mult(b)
         self.assertEqual(a.matrix, [[30, 24, 18], [84, 69, 54]])
+    
+    def test_transpose(self):
+        a = Matrix([[1, 2], [3, 4], [5, 6]])
+        a.transpose()
+        self.assertEqual(a.matrix, [[1, 3, 5], [2, 4, 6]])
