@@ -4,7 +4,7 @@ class Matrix:
 
     def add(self, otherMatrix):
         if (len(self.matrix) != len(otherMatrix.matrix) or len(self.matrix[0]) != len(otherMatrix.matrix[0])):
-            return
+            raise ValueError("Matrices cannot be added due to shape mismatch")
         
         for i in range(len(self.matrix)):
             for j in range(len(self.matrix[0])):
@@ -12,7 +12,7 @@ class Matrix:
     
     def sub(self, otherMatrix):
         if (len(self.matrix) != len(otherMatrix.matrix) or len(self.matrix[0]) != len(otherMatrix.matrix[0])):
-            return
+            raise ValueError("Matrices cannot be subtracted due to shape mismatch")
         
         for i in range(len(self.matrix)):
             for j in range(len(self.matrix[0])):
@@ -20,7 +20,7 @@ class Matrix:
     
     def mult(self, otherMatrix):
         if len(self.matrix[0]) != len(otherMatrix.matrix):
-            raise ValueError("Matrices cannot be multiplied")
+            raise ValueError("Matrices cannot be multiplied due to shape mismatch")
         
         result = [[0 for _ in range(len(otherMatrix.matrix[0]))] for _ in range(len(self.matrix))]
 
